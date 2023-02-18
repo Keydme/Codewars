@@ -19,8 +19,8 @@ def line_space(x1, x2, B, A=1, OMEGA=1, PHI=0): #x1,x2范围 , B步长 , Phi φ�
 def addy(B):
     x = np.linspace(0, 20, 1000)
     y = np.linspace(0,0,1000)
-    x1, y2 = line_space(20-20*B/1000, 20, B+1, 20*B/1000-20)#+np.pi)
-    x2, y1 = line_space(0, 20*B/1000, B+1, 2, -20*B/1000, 2)
+    x1, y2 = line_space(20-20*B/1000, 20, B+1, PHI=20*B/1000-20,)#+np.pi)
+    x2, y1 = line_space(0, 20*B/1000, B+1, 2, 2, -20*B/1000)
     if B>500: 
         for i in range(1000-B,B):
             y[i]=y1[i]+y2[i-1000+B]
