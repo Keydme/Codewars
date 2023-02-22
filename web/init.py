@@ -40,6 +40,8 @@ def upload_file():
       <input type=submit value=Upload>
     </form>
     '''
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -48,12 +50,13 @@ def index():
 @app.route('/download')
 def look():
     entries = os.listdir('./uploads')
-    return render_template('download.html',entries = entries)
+    return render_template('download.html', entries=entries)
 
 
 @app.route('/uploads/<filename>')
 def files(filename):
-    return send_from_directory(UPLOAD_FOLDER,filename)
+    return send_from_directory(UPLOAD_FOLDER, filename)
+
 
 if __name__ == '__main__':
     app.run('0.0.0.0')
