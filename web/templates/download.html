@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+
+<h1> download files as you want</h1>
+<h2>下载文件</h2>
+<ol>
+{% for entry in entries %}
+    <li><a href='/uploads/{{entry}}'>{{entry}}</a>
+{% endfor %}
+</ol>
+
+</html>
