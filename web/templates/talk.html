@@ -1,0 +1,20 @@
+<html>
+<body>
+
+<form method="POST">
+<label for="text">Type in:</label>
+<textarea ype="text" name="text" id="text" rows="15" cols="180"></textarea>
+<!-- 在此处写注释 <input type="text" name="text" id="text" style="height:100px;width=500px"/> -->
+<br />
+<input type="submit" name="submit" value="Submit"/>
+</form>
+<h3 style="text-align:center">This is a Boundary</h3>
+<ol style="text-align:center">
+{% for m in messages %}
+    <p style="text-align:center">{{m}}</p>
+{% endfor %}
+</ol>
+
+
+</body>
+</html>
